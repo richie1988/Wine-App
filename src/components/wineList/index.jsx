@@ -9,7 +9,7 @@ function ListOfWines() {
   const fetchWines = async () => {
     try {
       const response = await axios.get('http://localhost:5000/api/wines');
-      setWines(response.data);
+      setWines(response.data); // Update the state
     } catch (error) {
       console.error('Error fetching wines:', error.message);
       // Handle error (display a message to the user, etc.)
